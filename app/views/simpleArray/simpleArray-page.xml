@@ -1,0 +1,34 @@
+<Page loaded="pageLoaded">
+	<Page.actionBar>
+        <ActionBar title="Simple Array" icon="" class="action-bar">
+            <ActionItem tap="onObjectTap"  android.position="popup" text="Object" />
+            <ActionItem tap="onObjectTap"  android.position="popup" text="Observable" />
+			 <ActionItem tap="onArrayTap"  android.position="popup" text="Array" />
+            <ActionItem tap="onBeerArrayTap"  android.position="popup" text="Beer Array" />
+        </ActionBar>
+    </Page.actionBar>
+
+	<GridLayout rows="auto, *">
+		<GridLayout row="0" columns="*,auto" class="add-bar">
+			<TextField text="{{ newItem }}" col="0" />
+			 <Image src="~/images/add.png" tap="onTapAddItem" col="1" />
+		</GridLayout>
+		<StackLayout row="1">
+			<Label text="Simple Array" class="h2" />
+			<ListView items="{{ mySimpleArray }}" >
+				<ListView.itemTemplate>
+					<Label text="{{ $value }}" />
+				</ListView.itemTemplate>
+			</ListView>
+			<Label text="Complex Array" class="h2" id="marginTop" />
+			<ListView items="{{ myComplexArray }}" >
+				<ListView.itemTemplate>
+					<GridLayout columns="auto,*">
+						<Label text="{{ name }}" col="0" color="{{ color }}" />
+						<Label text="{{ qty }}" col="1" class="marginLeft" />
+					</GridLayout>
+				</ListView.itemTemplate>
+			</ListView>
+		</StackLayout>
+    </GridLayout>
+</Page>

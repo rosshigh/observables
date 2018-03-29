@@ -1,0 +1,47 @@
+#wrapper {
+	padding: 10;
+}
+
+#outerWrapper {
+	opacity: 0;
+}
+
+GridLayout {
+	margin-top: 10;
+	padding-top: 10;
+	border-bottom-width: 1;
+	height: 140;
+}
+
+.head {
+	font-size: 24;
+	font-family: Acme-Regular, Acme;
+	color:MediumBlue; 
+}
+
+.p {
+	font-size: 18;
+	font-family: NanumPenScript-Regular;
+}
+
+.abv {
+	font-size: 16;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.textContainer {
+	padding-left: 10;
+	padding-right: 20;
+}
+
+#pageHeader {
+	horizontal-align: center;
+	font-size: 36;
+}
+
+#headerBar {
+	width: 100%;
+	border-bottom-width: 1;
+	background-color: coral;
+}

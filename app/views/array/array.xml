@@ -1,0 +1,26 @@
+<Page loaded="pageLoaded">
+	<Page.actionBar>
+        <ActionBar title="Observable Array" icon="" class="action-bar">
+            <ActionItem tap="onObjectTap"  android.position="popup" text="Object" />
+            <ActionItem tap="onObservableTap"  android.position="popup" text="Observable" />
+			<ActionItem tap="onSimpleArrayTap"  android.position="popup" text="Simple Array" />
+            <ActionItem tap="onBeerArrayTap"  android.position="popup" text="Beer Array" />
+        </ActionBar>
+    </Page.actionBar>
+
+	<GridLayout rows="auto, *">
+		<GridLayout row="0" columns="*,auto" class="add-bar">
+			<TextField text="{{ newItem }}" col="0" />
+			 <Image src="~/images/add.png" tap="onTapAddItem" col="1" />
+		</GridLayout>
+		<StackLayout row="1">
+			<Label text="Simple Array" class="h2" />
+			<ListView items="{{ simpleArray }}" >
+				<ListView.itemTemplate>
+					<Label text="{{ $value }}" />
+				</ListView.itemTemplate>
+			</ListView>
+			
+		</StackLayout>
+    </GridLayout>
+</Page>

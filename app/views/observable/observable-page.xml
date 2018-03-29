@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"  loaded="pageLoaded" class="page">
+
+    <Page.actionBar>
+        <ActionBar title="My App" icon="" class="action-bar">
+            <ActionItem tap="onObjectTap"  android.position="popup" text="Object" />
+			 <ActionItem tap="onSimpleArrayTap"  android.position="popup" text="Simple Array" />
+            <ActionItem tap="onArrayTap"  android.position="popup" text="Array" />
+            <ActionItem tap="onBeerArrayTap"  android.position="popup" text="Beer Array" />
+        </ActionBar>
+    </Page.actionBar>
+ 
+    <StackLayout class="p-20">
+        <TextField text="{{ someVariable }}" />
+        <Label text="{{ someVariable }}" />
+        <Button text="Click Me!" tap="onButtonClick" />
+    </StackLayout>
+</Page>
